@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arman Gupta</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/34d89722d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p class="hidden" id="changing-text">Web Developer</p>
+                <h1>Hi, I'm <span>Arman Gupta</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="assets/about-me.png" alt="">
+                </div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hi! I’m Arman, a passionate coder from India. I completed my 10th and 12th at St. Xavier's School and am currently pursuing a BCA at Inspiria Knowledge Campus.
+
+                        Coding is my hobby and my way of solving real-world problems. With strong problem-solving skills and proficiency in languages like HTML, CSS, JavaScript, Python, C, and Java, I enjoy building user-friendly and dynamic applications.
+                        
+                        I’m always eager to learn, explore new technologies, and take on challenges that help me grow. Let’s connect and create something amazing!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Experienced in designing user-friendly interfaces with a focus on functionality and aesthetic appeal.</li>
+                            <li><span>Web Developer</span><br>Skilled in creating responsive and dynamic websites using HTML, CSS, JavaScript, and frameworks.</li>
+                            <li><span>App Developer</span><br>Knowledgeable in building efficient and functional applications using Java, Python, and problem-solving techniques.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>Created intuitive and visually appealing user interfaces, focusing on user-centric design principles and optimizing overall user experience.</li>
+                            <!--<li><span>UI/UX</span><br>Desigining Web.App interfaces</li>
+                            <li><span>UI/UX</span><br>Desigining Web.App interfaces</li>-->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021</span><br>10th from St.Xavier's School</li>
+                            <li><span>2023</span><br>12th from St.Xavier's School</li>
+                            <li><span>2023-2027</span><br>BCA from Inspiria Knowledge Campus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Developer</h2>
+                    <p>I specialize in creating responsive, dynamic websites that are tailored to meet the unique needs of each project.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>With a focus on aesthetics and usability, I design intuitive user interfaces and seamless experiences.</p>
+                    <a href="">Learn more</a>
+                </div>
+                <div>
+                    <h2>App Development</h2>
+                    <p>Whether you're building a mobile or web application, I provide robust development solutions using modern technologies.</p>
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+            <a href="" class="btn">See All</a>
+        </div>
+    </div>
+
+    <!--Portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <a href=""><img src="assets/weather-app.webp" alt=""></a>
+                    <div class="layer">
+                        <h3>Live Weather App</h3>
+                        <p>I created a weather app using APIs</p>
+                        <a href="https://weather-app-green-phi.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/ui-ux.png" alt="">
+                    <div class="layer">
+                        <h3>UI/UX Designer</h3>
+                        <p>Creating intuitive and visually compelling designs that enhance user experience.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="assets/app-dev.png" alt="">
+                    <div class="layer">
+                        <h3>App Developer</h3>
+                        <p>I specialize in building robust, user-friendly applications that meet the unique needs of clients.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope-circle-check"></i>adarsh10gupta@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7029736626</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/arman-gupta17/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/adarsh10gupta/profilecard/?igsh=MTFxaW02Y3RienY5" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <a href="assets/instagram.png" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="https://formsubmit.co/portfolio@gmail.com" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required id="">
+                        <input type="text" name="Email" placeholder="Your Email" required id="">
+                        <input type="text" name="Message" placeholder="Your Message" rows="6" required id="">
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Arman. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
