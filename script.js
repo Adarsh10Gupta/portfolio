@@ -12,7 +12,49 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-
+/* GSAP Animation */
+gsap.from("#sidemenu",{
+    y: -200,
+    stagger: 0.28,
+    delay: 0.5,
+    opacity: 0
+})
+gsap.from(".header-text",{
+    opacity:0,
+    duration: 1,
+    delay:1,
+    scrollTrigger: ".header-text"
+})
+gsap.from("#about",{
+    opacity:0,
+    duration: 1,
+    delay:1,
+    scrollTrigger: "#about"
+})
+gsap.from("#services",{
+    opacity:0,
+    duration: 1,
+    delay:1,
+    scrollTrigger: "#services"
+})
+gsap.from("#portfolio",{
+    opacity:0,
+    duration: 1,
+    delay:1,
+    scrollTrigger: "#portfolio"
+})
+gsap.from("#contact",{
+    opacity:0,
+    duration: 1,
+    delay:1,
+    scrollTrigger: "#contact"
+})
+gsap.from(".copyright",{
+    opacity:0,
+    duration: 1,
+    delay:0.5,
+    scrollTrigger: ".copyright"
+})
 /*changing text function*/ 
 const texts = ["Web Developer", "UI/UX Designer", "App Developer", "Content Creator", "Video Editor"];
 let index = 0;

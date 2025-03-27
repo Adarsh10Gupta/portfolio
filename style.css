@@ -13,8 +13,6 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
-    background-image: url(assets/background.png);
     background-size: cover;
     background-position: center;
 }
@@ -52,8 +50,10 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
+    justify-content: center;
+    text-align: center;
 }
 .header-text h1{
     font-size: 60px;
@@ -141,6 +141,9 @@ nav ul li a:hover::after{
 }
 .tab-contents.active-tab{
     display: block;
+}
+.active-link{
+    color: #fff;
 }
 
 /*services*/
@@ -335,15 +338,12 @@ nav .fa-solid{
     display: none;
 }
 @media only screen and (max-width: 600px){
-    #header{
-        margin-top: 40px;
-        background-image: url(assets/phone-background.png);
-    }
     .header-text{
         margin-left: -30px;
-        margin-top: 130%;
         font-size: 20px;
-        padding: 30px;
+    }
+    .header{
+        height: 0px;
     }
     .header-text h1{
         font-size: 30px;
@@ -358,7 +358,6 @@ nav .fa-solid{
         top: 0;
         right: -200px;
         width: 200px;
-        height: 100vh;
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
