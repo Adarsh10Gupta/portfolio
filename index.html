@@ -1,170 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arman Gupta</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/34d89722d9.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arman Gupta — BCA student, full-stack developer and AI/ML enthusiast building real-world software."
+  <title>Arman Gupta — Full-Stack Developer & AI/ML Enthusiast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/34d89722d9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav id="navBar">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#services">My Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p class="hidden" id="changing-text">Web Developer</p>
-                <h1>Hi, I'm <span>Arman Gupta</span></h1>
-            </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header id="header">
+    <div class="container">
+      <nav class="nav" id="navBar">
+        <a class="brand" href="#header" aria-label="Arman Gupta home">AG<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="sidemenu" aria-expanded="false" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="sidemenu">
+          <li><a href="#about" onclick="closemenu()">About</a></li>
+          <li><a href="#projects" onclick="closemenu()">Projects</a></li>
+          <li><a href="#stack" onclick="closemenu()">Stack</a></li>
+          <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+          <li><a class="nav-cta" href="mailto:adarsh10gupta@gmail.com">Let's talk <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        </ul>
+      </nav>
+
+      <section class="hero section-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR SOFTWARE / AI INTERNSHIPS</p>
+          <h1>Hi, I'm <span>Arman Gupta</span>.</h1>
+          <p class="hero-role"><span id="changing-text">Full-Stack Developer</span><span class="caret" aria-hidden="true"></span></p>
+          <p class="hero-lede">I build real products from real problems — combining full-stack engineering with Python, AI/ML and product-focused thinking.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View projects <i class="fa-solid fa-arrow-down"></i></a>
+            <a class="button button-ghost" href="assets/Arman_Gupta_CV.pdf" download>Download CV <i class="fa-solid fa-download"></i></a>
+          </div>
+          <div class="hero-meta">
+            <span>BCA · MAKAUT</span><span>7.14 CGPA</span><span>2023–2027</span>
+          </div>
         </div>
+
+        <aside class="system-card reveal reveal-delay" aria-label="Profile summary">
+          <div class="system-top"><span>arman@portfolio</span><span>01</span></div>
+          <div class="terminal-line"><span class="prompt">$</span> whoami</div>
+          <div class="terminal-value">full-stack / ai-ml / builder</div>
+          <div class="terminal-line"><span class="prompt">$</span> current_focus</div>
+          <div class="terminal-value muted">Python · ML · APIs · intelligent products</div>
+          <div class="terminal-line"><span class="prompt">$</span> based_in</div>
+          <div class="terminal-value">India · open to remote / hybrid</div>
+          <div class="system-footer"><span>system.status</span><span class="online">● online</span></div>
+        </aside>
+      </section>
+
+      <div class="ticker" aria-label="Technology ticker">
+        <div class="ticker-track">
+          <span>React</span><span>Next.js</span><span>Node.js</span><span>Python</span><span>FastAPI</span><span>NumPy</span><span>Pandas</span><span>scikit-learn</span><span>TensorFlow</span><span>PyTorch</span><span>LangChain</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Linux</span>
+          <span>React</span><span>Next.js</span><span>Node.js</span><span>Python</span><span>FastAPI</span><span>NumPy</span><span>Pandas</span><span>scikit-learn</span><span>TensorFlow</span><span>PyTorch</span><span>LangChain</span><span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>Linux</span>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <!--about-->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col1">
-                    <img src="assets/about-me.png" alt="">
-                </div>
-                <div class="about-col2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>Hi! I’m Arman, a passionate coder from India. I completed my 10th and 12th at St. Xavier's School and am currently pursuing my Bachelor's degree in Computer Application at Inspiria Knowledge Campus.
+  <main>
+    <section id="about" class="section">
+      <div class="container section-grid about-grid">
+        <div class="section-kicker reveal"><span>01</span> ABOUT</div>
+        <div class="section-content reveal">
+          <h2>I like shipping, not just studying.</h2>
+          <p class="lead">I'm a BCA student at Inspiria Knowledge Campus under MAKAUT, with hands-on experience building client websites and full-stack products.</p>
+          <p>I enjoy turning messy, real-world requirements into clean interfaces, reliable APIs and useful software. My current direction is software engineering with a growing focus on Python, data and AI/ML — especially when those technologies solve a concrete product problem.</p>
+          <div class="about-pills"><span>Problem solving</span><span>API design</span><span>Product thinking</span><span>Fast learning</span><span>Debugging</span></div>
+        </div>
+      </div>
+    </section>
 
-                        Coding is my hobby and my way of solving real-world problems. With strong problem-solving skills and proficiency in languages like HTML, CSS, JavaScript, Python, C, and Java, I enjoy building user-friendly and dynamic applications.
-                        
-                        I’m always eager to learn, explore new technologies, and take on challenges that help me grow. Let’s connect and create something amazing!</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX</span><br><br>Experienced in designing user-friendly interfaces with a focus on functionality and aesthetic appeal.</li>
-                            <li><span>Web Developer</span><br><br>Skilled in creating responsive and dynamic websites using HTML, CSS, JavaScript, and frameworks.</li>
-                            <li><span>App Developer</span><br><br>Knowledgeable in building efficient and functional applications using Java, Python, and problem-solving techniques.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>UI/UX</span><br><br>Created intuitive and visually appealing user interfaces, focusing on user-centric design principles and optimizing overall user experience.</li>
-                            <!--<li><span>UI/UX</span><br>Desigining Web.App interfaces</li>
-                            <li><span>UI/UX</span><br>Desigining Web.App interfaces</li>-->
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2021</span><br><br>10th from St.Xavier's School</li>
-                            <li><span>2023</span><br><br>12th from St.Xavier's School</li>
-                            <li><span>2023-2027</span><br><br>BCA from Inspiria Knowledge Campus</li>
-                        </ul>
-                    </div>
-                </div>
+    <section id="projects" class="section section-dark">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><div class="section-kicker"><span>02</span> SELECTED WORK</div><h2>Projects that show how I build.</h2></div>
+          <p>Real products, client work and systems built with modern web technologies.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-topline"><span>01 / PRODUCT</span><span class="live-tag">LIVE</span></div>
+            <div class="project-main">
+              <div>
+                <h3>RecoverAI</h3>
+                <p class="project-subtitle">Payment reliability & recovery control plane for merchants.</p>
+              </div>
+              <p>Multi-tenant payment operations platform that detects payment failures and checkout abandonment, scores recovery opportunities, records actions and surfaces verified metrics. Built around Razorpay Test Mode with a Node.js/Express backend, PostgreSQL and a deployed frontend/backend architecture.</p>
+              <div class="tech-row"><span>Vite</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Razorpay</span><span>Cloudflare</span></div>
+              <div class="project-links"><a href="https://recoverai.pages.dev/" target="_blank" rel="noreferrer">Live product <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/Adarsh10Gupta/RecoverAI" target="_blank" rel="noreferrer">Source <i class="fa-brands fa-github"></i></a></div>
             </div>
-        </div>
-    </div>
+          </article>
 
-    <!--Services-->
-    <div id="services">
-        <div class="container">
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <h2>Web Developer</h2>
-                    <p>I specialize in creating responsive, dynamic websites that are tailored to meet the unique needs of each project.</p>
-                    <a href="" class="learn-more">Learn more</a>
-                </div>
-                <div>
-                    <h2>UI/UX Design</h2>
-                    <p>With a focus on aesthetics and usability, I design intuitive user interfaces and seamless experiences.</p>
-                    <a href="" class="learn-more">Learn more</a>
-                </div>
-                <div>
-                    <h2>App Development</h2>
-                    <p>Whether you're building a mobile or web application, I provide robust development solutions using modern technologies.</p>
-                    <a href="" class="learn-more">Learn more</a>
-                </div>
-            </div>
-            <a href="#" class="btn">See All</a>
-        </div>
-    </div>
+          <article class="project-card reveal reveal-delay">
+            <div class="project-topline"><span>02 / CLIENT</span><span class="live-tag">PRE-LAUNCH</span></div>
+            <h3>Fittronics</h3>
+            <p class="project-subtitle">Full-stack e-commerce platform + admin dashboard.</p>
+            <p>Client build with a Next.js storefront, separate Node/Express backend and React admin panel. Includes authentication, Razorpay payments, media handling, dashboards and a responsive storefront experience.</p>
+            <div class="tech-row"><span>Next.js</span><span>React</span><span>Node</span><span>Express</span><span>MySQL</span><span>Razorpay</span></div>
+            <div class="project-links"><a href="https://fittronics-next.vercel.app/" target="_blank" rel="noreferrer">Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/Adarsh10Gupta/fittronics-next" target="_blank" rel="noreferrer">Frontend <i class="fa-brands fa-github"></i></a><a href="https://github.com/Adarsh10Gupta/fittronics-backend" target="_blank" rel="noreferrer">Backend <i class="fa-brands fa-github"></i></a><a href="https://github.com/Adarsh10Gupta/fittronics-admin" target="_blank" rel="noreferrer">Admin <i class="fa-brands fa-github"></i></a></div>
+          </article>
 
-    <!--Portfolio-->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="subtitle">My Work</h1>
-            <div class="worklist">
-                <div class="work">
-                    <a href=""><img src="assets/weather-app.webp" alt=""></a>
-                    <div class="layer">
-                        <h3>Live Weather App</h3>
-                        <p>I created a weather app using APIs</p>
-                        <a href="https://weather-app-green-phi.vercel.app/"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="assets/ui-ux.png" alt="">
-                    <div class="layer">
-                        <h3>UI/UX Designer</h3>
-                        <p>Creating intuitive and visually compelling designs that enhance user experience.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="assets/app-dev.png" alt="">
-                    <div class="layer">
-                        <h3>App Developer</h3>
-                        <p>I specialize in building robust, user-friendly applications that meet the unique needs of clients.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-    </div>
+          <article class="project-card reveal">
+            <div class="project-topline"><span>03 / CLIENT</span><span class="live-tag">LIVE</span></div>
+            <h3>International Immigration</h3>
+            <p class="project-subtitle">Overseas education, migration and career services website.</p>
+            <p>Client-facing website designed around trust, clear service journeys and lead generation for overseas education, job migration, IELTS preparation and European language training.</p>
+            <div class="tech-row"><span>Web</span><span>Responsive UI</span><span>Node/Express</span><span>MongoDB</span></div>
+            <div class="project-links"><a href="https://internationalimmigratn.com/" target="_blank" rel="noreferrer">Live website <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://github.com/Adarsh10Gupta/Immigration" target="_blank" rel="noreferrer">Frontend <i class="fa-brands fa-github"></i></a><a href="https://github.com/Adarsh10Gupta/immigration-backend" target="_blank" rel="noreferrer">Backend <i class="fa-brands fa-github"></i></a></div>
+          </article>
 
-    <!--Contact-->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope-circle-check"></i>adarsh10gupta@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>7029736626</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/arman-gupta17/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/adarsh10gupta/profilecard/?igsh=MTFxaW02Y3RienY5" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                    </div>
-                    <a href="assets/Arman_Gupta_CV.pdf" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form action="https://formsubmit.co/portfolio@gmail.com" method="POST">
-                        <input type="text" name="Name" placeholder="Your Name" required id="">
-                        <input type="text" name="Email" placeholder="Your Email" required id="">
-                        <input type="text" name="Message" placeholder="Your Message" rows="6" required id="">
-                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                </div>
-            </div>
+          <article class="project-card reveal reveal-delay">
+            <div class="project-topline"><span>04 / CLIENT</span><span class="live-tag">LIVE</span></div>
+            <h3>WovenWonders</h3>
+            <p class="project-subtitle">Handcrafted gifting e-commerce experience.</p>
+            <p>Live storefront with product browsing, filtering, custom-order flows and personalization options designed around a visual, gift-first shopping experience.</p>
+            <div class="tech-row"><span>E-commerce</span><span>Custom Orders</span><span>Product UX</span><span>WhatsApp</span></div>
+            <div class="project-links"><a href="https://wovenwonder.in/" target="_blank" rel="noreferrer">Live website <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
         </div>
-        <div class="copyright">
-            <p>© 2024 Arman. All rights reserved.</p>
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js">
+      </div>
+    </section>
 
-    </script>
+    <section id="stack" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><div class="section-kicker"><span>03</span> TOOLKIT</div><h2>My working stack.</h2></div>
+          <p>Technologies I use or am actively developing with, organized around shipping useful software.</p>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-block reveal"><span class="stack-index">01</span><h3>Frontend</h3><p>React · Next.js · JavaScript · HTML · CSS · Tailwind CSS · GSAP · Vite</p></div>
+          <div class="stack-block reveal reveal-delay"><span class="stack-index">02</span><h3>Backend</h3><p>Node.js · Express · FastAPI · REST APIs · JWT · Webhooks · Nodemailer</p></div>
+          <div class="stack-block reveal"><span class="stack-index">03</span><h3>Python & Data</h3><p>Python · NumPy · Pandas · scikit-learn · MySQL · PostgreSQL · MongoDB</p></div>
+          <div class="stack-block reveal reveal-delay"><span class="stack-index">04</span><h3>AI / ML</h3><p>Machine Learning · TensorFlow · PyTorch · LangChain · LLM workflows · AI product development</p></div>
+          <div class="stack-block reveal"><span class="stack-index">05</span><h3>Cloud & Integrations</h3><p>Razorpay · Cloudinary · Cloudflare Pages · Render · API integrations</p></div>
+          <div class="stack-block reveal reveal-delay"><span class="stack-index">06</span><h3>Workflow</h3><p>Git · GitHub · Linux · Ubuntu · debugging · API testing · deployment</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <div class="section-kicker"><span>04</span> CONTACT</div>
+          <h2>Let's build something useful.</h2>
+          <p class="contact-copy">I'm actively looking for software engineering, full-stack, Python and AI/ML internship opportunities.</p>
+          <a class="email-link" href="mailto:adarsh10gupta@gmail.com">adarsh10gupta@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <div class="social-icons">
+            <a href="https://github.com/Adarsh10Gupta" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/arman-gupta-029494378/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/adarsh10gupta/profilecard/?igsh=MTFxaW02Y3RienY5" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-panel reveal reveal-delay">
+          <div class="contact-panel-top"><span>QUICK INFO</span><i class="fa-solid fa-bolt"></i></div>
+          <div class="contact-row"><span>Education</span><strong>BCA · MAKAUT</strong></div>
+          <div class="contact-row"><span>Availability</span><strong>Internships / Entry-level</strong></div>
+          <div class="contact-row"><span>Location</span><strong>India · Remote friendly</strong></div>
+          <div class="contact-row"><span>Phone</span><strong>+91 70297 36626</strong></div>
+          <a class="button button-primary full" href="mailto:adarsh10gupta@gmail.com">Start a conversation <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="container footer"><span>© 2026 Arman Gupta</span><span>Built with curiosity & caffeine.</span></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
 </body>
 </html>
