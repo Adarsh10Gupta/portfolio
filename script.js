@@ -1,104 +1,75 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+const menu = document.getElementById('sidemenu');
+const menuButton = document.querySelector('.menu-toggle');
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+function toggleMenu(){
+  const open = menu.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(open));
 }
 
-/* GSAP Animation */
-gsap.from("#sidemenu",{
-    y: -200,
-    stagger: 0.28,
-    delay: 0.5,
-    opacity: 0
-})
-gsap.from(".header-text",{
-    opacity:0,
-    duration: 1,
-    delay:1,
-    scrollTrigger: ".header-text"
-})
-gsap.from("#about",{
-    opacity:0,
-    duration: 1,
-    delay:1,
-    scrollTrigger: "#about"
-})
-gsap.from("#services",{
-    opacity:0,
-    duration: 1,
-    delay:1,
-    scrollTrigger: "#services"
-})
-gsap.from("#portfolio",{
-    opacity:0,
-    duration: 1,
-    delay:1,
-    scrollTrigger: "#portfolio"
-})
-gsap.from("#contact",{
-    opacity:0,
-    duration: 1,
-    delay:1,
-    scrollTrigger: "#contact"
-})
-gsap.from(".copyright",{
-    opacity:0,
-    duration: 1,
-    delay:0.5,
-    scrollTrigger: ".copyright"
-})
-/*changing text function*/ 
-const texts = ["Web Developer", "UI/UX Designer", "App Developer", "Content Creator", "Video Editor"];
-let index = 0;
+function closemenu(){
+  menu.classList.remove('open');
+  if(menuButton) menuButton.setAttribute('aria-expanded','false');
+}
+
+// Close mobile navigation after clicking outside.
+document.addEventListener('click', (event) => {
+  if (!menu || !menuButton) return;
+  if (!menu.contains(event.target) && !menuButton.contains(event.target)) closemenu();
+});
+
+// Lightweight typewriter for the hero role.
+const roles = ['Full-Stack Developer', 'AI/ML Enthusiast', 'Python Developer', 'Software Builder'];
+const textElement = document.getElementById('changing-text');
+let roleIndex = 0;
 let charIndex = 0;
-let currentText = "";
-let isDeleting = false;
+let deleting = false;
 
-function typeEffect() {
-    const textElement = document.getElementById("changing-text");
-
-    if (!isDeleting && charIndex < texts[index].length) {
-        currentText += texts[index][charIndex];
-        charIndex++;
-    } else if (isDeleting && charIndex > 0) {
-        currentText = currentText.slice(0, -1);
-        charIndex--;
+function typeEffect(){
+  if(!textElement) return;
+  const role = roles[roleIndex];
+  textElement.textContent = role.slice(0, charIndex);
+  if(!deleting){
+    charIndex++;
+    if(charIndex > role.length){
+      deleting = true;
+      setTimeout(typeEffect, 1200);
+      return;
     }
-
-    textElement.textContent = currentText;
-
-    if (charIndex === texts[index].length && !isDeleting) {
-        isDeleting = true;
-        setTimeout(typeEffect, 1000);
-        return;
+  }else{
+    charIndex--;
+    if(charIndex < 0){
+      charIndex = 0;
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
     }
-
-    if (charIndex === 0 && isDeleting) {
-        isDeleting = false;
-        index = (index + 1) % texts.length;
-    }
-    const typingSpeed = isDeleting ? 100 : 150;
-    setTimeout(typeEffect, typingSpeed);
+  }
+  setTimeout(typeEffect, deleting ? 55 : 90);
 }
 typeEffect();
 
+// Scroll reveal without requiring GSAP to be available.
+const revealItems = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+revealItems.forEach(item => observer.observe(item));
 
+// Subtle pointer glow on desktop.
+const glow = document.querySelector('.cursor-glow');
+window.addEventListener('pointermove', (event) => {
+  if(glow) {
+    glow.style.left = `${event.clientX}px`;
+    glow.style.top = `${event.clientY}px`;
+  }
+},{passive:true});
 
-/*Sidemenu function*/
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu(){
-    sidemenu.style.right = "0";
+// Optional GSAP enhancement if the CDN is available.
+if(window.gsap && window.ScrollTrigger){
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from('.brand',{opacity:0,y:-12,duration:.7,ease:'power2.out'});
 }
-function closemenu(){
-    sidemenu.style.right = "-200px";
-}
-
