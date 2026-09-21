@@ -121,3 +121,4 @@ body.modal-open{overflow:hidden}
  .intro-icon{width:32px;height:32px}
  .github-summary>div{min-width:50%;border-bottom:1px solid #252b33}
 }
+.stack-index{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:1px solid #29313a;border-radius:50%;font-size:9px}.stack-index i{font-size:8px}.direction-icon{width:28px;height:28px;border:1px solid #29313a;border-radius:50%;display:grid;place-items:center;color:#65d8ff;grid-row:span 2;font-size:9px}
