@@ -73,3 +73,28 @@ if(window.gsap && window.ScrollTrigger){
   gsap.registerPlugin(ScrollTrigger);
   gsap.from('.brand',{opacity:0,y:-12,duration:.7,ease:'power2.out'});
 }
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card[data-category]');
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    button.classList.add('active');
+    const filter = button.dataset.filter;
+    projectCards.forEach(card => {
+      const categories = card.dataset.category.split(' ');
+      card.classList.toggle('is-hidden', filter !== 'all' && !categories.includes(filter));
+    });
+  });
+});
+
+function copyEmail(){
+  const email='adarsh10gupta@gmail.com';
+  navigator.clipboard?.writeText(email).then(() => {
+    const btn=document.querySelector('.copy-email');
+    if(!btn) return;
+    const original=btn.textContent;
+    btn.textContent='Copied';
+    setTimeout(()=>btn.textContent=original,1400);
+  });
+}
